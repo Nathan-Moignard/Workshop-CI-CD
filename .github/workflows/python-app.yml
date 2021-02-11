@@ -23,6 +23,7 @@ jobs:
       with:
         python-version: 3.9
     - name: Install dependencies
-      run: pip3 install -r requirements.txt
+      run: apt install python3-pip
+    - run: pip3 install -r requirements.txt
     - name: Test with pytest
       run: python3 -m pytest . -vv
